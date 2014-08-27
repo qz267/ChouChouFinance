@@ -14,6 +14,8 @@ class OrderType(models.Model):
     update_time = models.DateTimeField()
     updator_id = models.IntegerField()
 
+    def __unicode__(self):
+        return self.order_type_id
 
 class Order(models.Model):
     """
@@ -30,6 +32,9 @@ class Order(models.Model):
     creator_id = models.IntegerField()
     update_time = models.DateTimeField()
     updator_id = models.IntegerField()
+    
+    def __unicode__(self):
+        return self.order_id
 
 
 class PackageTracking(models.Model):
@@ -45,6 +50,8 @@ class PackageTracking(models.Model):
     update_time = models.DateTimeField()
     updator_id = models.IntegerField()
 
+    def __unicode__(self):
+        return self.package_tracking_id
 
 class PackageCarrier(models.Model):
     """
@@ -58,6 +65,8 @@ class PackageCarrier(models.Model):
     update_time = models.DateTimeField()
     updator_id = models.IntegerField()
 
+    def __unicode__(self):
+        return self.package_carrier_id
 
 class Refound(models.Model):
     """
@@ -72,4 +81,6 @@ class Refound(models.Model):
     update_time = models.DateTimeField()
     updator_id = models.IntegerField()
 
+    def __unicode__(self):
+        return self.refund_id
 
