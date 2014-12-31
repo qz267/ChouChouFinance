@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>List of Spending Records</title>
+</head>
+<body>
+    <h1>Spending Records List</h1>
+    {% for spending_record in spending_records_list %}
+    <li>
+        <tr>
+            <td>Date</td>
+            <td>Amount</td>
+            <td>Category</td>
+            <td>Note</td>
+        </tr>
+    </li>
+    <li>
+        <tr>
+            <td>{{spending_record.spending_date}}</td>
+            <td>{{spending_record.spending_amount}}</td>
+            <td>{{spending_record.spending_category_id}}</td>
+            <td>{{spending_record.spending_note}}</td>
+        </tr>
+    </li>
+
+    {% endfor %}
+</body>
+</html>
