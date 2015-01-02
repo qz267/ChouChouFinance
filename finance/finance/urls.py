@@ -11,4 +11,7 @@ urlpatterns = patterns('',
     url(r'^spending-list/$', sp_views.list_spending),
     url(r'^spending-new/$', sp_views.new_spending),
     url(r'^spending-add/$', sp_views.add_spending),
+    url(r'^display-meta/$', sp_views.display_meta),
+    url(r'^search-form/$', sp_views.search_form),
+    url(r'^search/$', sp_views.search),
 )

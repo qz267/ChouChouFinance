@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if spending_records %}
+    <p>Found {{ spending_records |length }} spending record {{ spending_records | pluralize }}.</p>
+    <ul>
+        {% for spending_record in spending_records %}
+        <li>{{ spending_record.spending_amount }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No spending record matched your search criteria.</p>
+{% endif %}
+</body>
+</html>
