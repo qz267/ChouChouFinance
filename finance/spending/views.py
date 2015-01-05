@@ -13,13 +13,6 @@ def list_spending(request):
 
 
 def new_spending(request):
-    # add_item = SpendingRecords()
-    # content = request.POST['content']
-    # add_item.spending_date = content['date']
-    # add_item.spending_amount = content['spending_amount']
-    # add_item.spending_note = content['spending_note']
-    # add_item.spending_category_id = content['spending_category_id']
-    # add_item.save()
     return render(
         request,
         'spending_new.html',
